@@ -83,3 +83,5 @@ function validateInputState(state) {
         throw new Error(`Должно выполняться N > M (сейчас N=${N}, M=${M})`);
     }
 }
+
+module.exports = {validateInputState};
