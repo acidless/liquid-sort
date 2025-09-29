@@ -7,13 +7,18 @@ const rl = readline.createInterface({
 rl.question(
     'Введите двумерный массив размерности NxV, где N - кол-во пробирок, а V - кол-во жидкости в пробирке: ',
     (input) => {
-        const inputArray = JSON.parse(input);
+        const inputState = JSON.parse(input);
 
-        const result = solve(inputArray, inputArray[0].length);
-        console.log(result);
+        const result = solve(inputState, inputState[0].length);
+        if (result) {
+            console.log("Решение найдено за", result.length, "ходов:");
+            console.log(result.map(m => `(${m[0]}, ${m[1]})`).join(" "));
+        } else {
+            console.log("Решение не найдено");
+        }
+
         rl.close();
-});
-
+    });
 
 function serialize(state) {
     return state.map(tube => tube.join(",")).join("|");
@@ -50,8 +55,7 @@ function getMoves(state, tubeCapacity) {
                 for (let k = state[i].length - 2; k >= 0; k--) {
                     if (state[i][k] === liquid) {
                         liquidCount++;
-                    }
-                    else {
+                    } else {
                         break;
                     }
                 }
