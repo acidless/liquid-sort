@@ -15,7 +15,7 @@ rl.question(
 
             const result = solve(inputState, inputState[0].length);
             if (result) {
-                console.log("Решение найдено за", result.length, "ходов:");
+                console.log("Решение найдено! Кол-во ходов:", result.length);
                 console.log(result.map(m => `(${m[0]}, ${m[1]})`).join(" "));
             } else {
                 console.log("Решение не найдено");
