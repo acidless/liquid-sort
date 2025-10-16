@@ -1,18 +1,18 @@
-# Решатение головоломки с пробирками
+# Solving the test tube puzzle
 
-Реализация на Node.js решения **головоломки сортировки жидкостей (water sort puzzle)** с валидацией входных данных.  
-Проект проверяет корректность состояния игры и пытается найти последовательность ходов, которая приведёт к сортировке всех пробирок по цветам/жидкостям.
+Implementation of the **water sort puzzle** solution in Node.js with input data validation.  
+The project checks the correctness of the game state and attempts to find a sequence of moves that will sort all test tubes by color/liquid.
 
-## 🚀 Возможности
+## 🚀 Features
 
-- ✅ Валидация входных данных с понятными сообщениями об ошибках  
-- ✅ Алгоритм решения, который находит последовательность ходов (если решение существует)  
-- ✅ Написан на чистом JavaScript (Node.js)  
-- ✅ Покрыт тестами с помощью Jest  
+- ✅ Input data validation with clear error messages
+- ✅ Solution algorithm that finds a sequence of moves (if a solution exists)
+- ✅ Written in pure JavaScript (Node.js)  
+- ✅ Covered by tests using Jest
 
-## 🛠 Установка
+## 🛠 Installation
 
-Клонируйте репозиторий и установите зависимости:
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/acidless/liquid-sort.git
@@ -20,29 +20,29 @@ cd liquid-sort
 npm install
 ````
 
-## ℹ️ Использование
-1) Запустите программу
+## ℹ️ Usage
+1) Run the program
 ```bash
 npm start
 ```
-2) Введите входные данные с клавиатуры, например:
+2) Enter the input data from the keyboard, for example:
 ```bash
 [["R", "G"], ["G", "R"], []]
 ```
-3) Программа должна вернуть следующий результат:
+3) The program should return the following result:
 ```bash
 Решение найдено! Кол-во ходов: 3
 (0, 2) (1, 0) (1, 2)
 ```
 
-## ☑️ Тестирование
+## ☑️ Testing
 
-Запустите тесты с помощью Jest:
+Run the tests using Jest:
 
 ```bash
 npm test
 ```
 
-## 📝 Лицензия
+## 📝 License
 
-Этот проект распространяется под лицензией MIT.
+This project is distributed under the MIT license.
